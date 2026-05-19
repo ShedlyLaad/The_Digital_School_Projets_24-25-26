@@ -75,7 +75,7 @@ Ce repository centralise mes projets académiques et pratiques : applications we
 ## Contact
 
 **GitHub :** [ShedlyLaad](https://github.com/ShedlyLaad)
-**E-Mail :** [ChedlyLaadhiby](shedlylaaddhiby@gmail.com
+**E-Mail :** [shedlylaaddhiby@gmail.com]
 )
 
 © 2026 **Chedly Laadhiby** — Tous droits réservés
