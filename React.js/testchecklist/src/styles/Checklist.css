@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .dashboard, .checklist {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #26547c;
+  }
+  
+  .new-button {
+    background-color: #ffd166;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .new-button:hover {
+    background-color: #e0b757;
+  }
+  
+  .checklist-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .checklist-item h2 {
+    margin-top: 0;
+  }
+  
+  .edit-button, .delete-button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-button {
+    background-color: #26547c;
+    color: white;
+  }
+  
+  .edit-button:hover {
+    background-color: #1f4b6c;
+  }
+  
+  .delete-button {
+    background-color: #ef476f;
+    color: white;
+  }
+  
+  .delete-button:hover {
+    background-color: #d83b5f;
+  }
+  
+  .task-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .task-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .task-item.done {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .checklist button {
+    background-color: #26547c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .checklist button:hover {
+    background-color: #1f4b6c;
+  }
+  

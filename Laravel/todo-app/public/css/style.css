@@ -1,0 +1,54 @@
+.todo-container {
+    background-color: rgba(0, 0, 0, 0.11);
+    text-align: center;
+}
+
+.todo-container h1 {
+    text-transform: uppercase;
+    font-family: Algerian;
+    letter-spacing: 3px;
+    margin-top: 10%;
+}
+
+#todo__add {
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.todo_form {
+    margin-bottom: 40px;
+}
+
+.btn {
+    width: 80px;
+    height: 40px;
+    border: 1px solid black;
+    background: linear-gradient(to right, gray, rgba(0, 0, 0, 0.11));
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: linear-gradient(to left, gray, rgba(0, 0, 0, 0.11));
+}
+
+.todo-container table {
+    margin: auto;
+    width: 60%;
+}
+
+.todo-container table th {
+    font-size: 20px;
+    padding-bottom: 8px;
+    font-style: italic;
+}
+
+.todo-container table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.btn-action {
+    display: block;
+}

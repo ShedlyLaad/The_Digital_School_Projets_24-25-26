@@ -1,0 +1,621 @@
+/* importer l'url de Roboto sans serif */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+:root {
+  --secondary-color: #FFD166;
+  --primary-color: #26547C;
+  --accent-color: #EF476F;
+}
+--secondary-color:
+--accent-color:
+--primary-color:
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--primary-color);
+  color: white;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  background: #ffd16637;
+  overflow: hidden;
+}
+
+h1 {
+  color: var(--accent-color);
+}
+
+header, footer {
+  background-color: var(--secondary-color);
+  padding: 1em;
+}
+
+nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2em;
+  /* Fait moi une degradation pour le backgroun color: */
+  background: linear-gradient(to right, #d9c69b, #fac7c9);
+  
+  color: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 72%;
+  width: 96%;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  height: 7vh;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--primary-color);
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  color: #26547C;
+}
+
+/* navbar */
+.navbar {
+  background: linear-gradient(to bottom, #0f05d8, #26547C);
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 98%;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+  margin-left: 1em;
+}
+
+.login-button:hover {
+  background-color: #FFD166;
+  color: var(--secondary-color);
+}
+
+/* dashboard */
+:root {
+  --background-color: #f4f4f9;
+}
+
+.dashboard {
+  padding: 2em;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-data {
+  text-align: center;
+  color: red;
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+.add-checklist-button {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--primary-color);
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.add-checklist-button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.checklist-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.checklist-table th, .checklist-table td {
+  border: 1px solid var(--primary-color);
+  padding: 0.5em;
+  text-align: left;
+}
+
+.checklist-table th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.checklist-table tr:nth-child(even) {
+  background-color: #e9e9e9;
+}
+
+.status-select {
+  padding: 0.3em;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+.view-button, .delete-button {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--primary-color);
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 0.5em;
+}
+
+.view-button:hover, .delete-button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* checklist */
+:root {
+  --primary-color: #26547C;
+  --secondary-color: #EF476F;
+  --accent-color: #FFD166;
+  --background-color: #f4f4f9;
+}
+
+.checklist-container {
+  padding: 2em;
+  background-color: #26547C;;
+  color: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #EF476F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 35%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-description, .card-status, .card-created-at, .todo-description, .todo-status {
+  margin-bottom: 5px;
+}
+
+.card-todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card-todo-item {
+  padding: 10px 0;
+}
+
+.todo-title {
+  margin: 0;
+  cursor: pointer;
+}
+
+.card-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-buttons button {
+  border-radius: 4px;
+}
+
+.card-edit-button {
+  background-color: #26547C;
+  color: white;
+  border: none;
+}
+
+.card-edit-button:hover {
+  background-color: #FFD166;
+}
+
+.card-delete-button {
+  background-color: #EF476F;
+  color:#f4f4f9;;
+  border: none;
+}
+
+.card-delete-button:hover {
+  background-color: #EF476F;
+}
+
+.edit-form {
+  padding: 1em;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-input, .edit-textarea, .edit-select {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-save-button, .edit-cancel-button {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--primary-color);
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.edit-save-button:hover, .edit-cancel-button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* form page add */
+:root {
+  --primary-color: #26547C;
+  --secondary-color: #EF476F;
+  --accent-color: #FFD166;
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --input-border-color: #ccc;
+}
+
+.form-container1 {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+    left: 36%;
+    width: 300px;
+    border-radius: 4.75rem;
+    background-color: #26547C;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* background: #fff;
+  
+  display: flex;
+   */
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.form-container form > div {
+  margin-bottom: 15px;
+}
+
+.form {
+  overflow-y: auto;
+  height: 61vh;
+  width: 102%;
+  overflow-x: hidden;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+.input-field:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.add-task-btn,
+.submit-btn {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--primary-color);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.add-task-btn:hover,
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.task-container {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  background-color: #EF476F;;
+}
+
+.task-container label {
+  margin-top: 10px;
+}
+
+.task-container input,
+.task-container textarea,
+.task-container select {
+  margin-top: 5px;
+}
+
+.task-container select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+.task-container select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* edit form */
+.edit-form {
+  margin-bottom: 20px;
+  overflow-y: auto;
+  height: 60vh;
+  width: 50%;
+  overflow-x: hidden;
+}
+
+.edit-input,
+.edit-textarea,
+.edit-select {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.task-edit-item {
+  margin-bottom: 20px;
+}
+
+.edit-delete-task-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.edit-delete-task-button:hover {
+  background-color: #d32f2f;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.edit-save-button,
+.edit-cancel-button {
+  background-color: #1d045b;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-save-button:hover,
+.edit-cancel-button:hover {
+  background-color: #45a049;
+}
+
+/* loading */
+.spinner {
+  height: 50px;
+  width: max-content;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1em;
+  color: #ac1515;
+  filter: drop-shadow(0 0 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner span {
+  animation: loading6454 1.75s ease infinite;
+}
+
+.spinner span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.spinner span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.spinner span:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+.spinner span:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.spinner span:nth-child(6) {
+  animation-delay: 1.25s;
+}
+
+.spinner span:nth-child(7) {
+  animation-delay: 1.5s;
+}
+
+@keyframes loading6454 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+:where(.css-dev-only-do-not-override-j9bb5n).ant-form-item .ant-form-item-label >label {
+  color: #e9e9e9;
+  font: weight 500px;;
+}
+
+.footer {
+  background: linear-gradient(to bottom, #0f05d8, #26547C);  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding: 1em 0;
+  color: white;
+}
+
+.contact_us {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 1em;
+}
+
+.footer__contact {
+  padding-bottom: 1.5em;
+}
+
+.social-icons {
+  padding-bottom: 1em;
+  display: flex;
+  gap: 10px;
+}
+
+.footer__icon {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer__icon:hover {
+  transform: scale(1.2);
+}
+
+.footer__copyright {
+  margin-top: 1em;
+  background-color: var(white);
+  width: 100%;
+  text-align: center;
+  padding: 0.5em 0;
+  font-size: 0.875em;
+  color: white;
+}
+
+.footer__copyright {
+  margin-top: 1em;
+  background-color: var(white);
+  width: 100%;
+  text-align: center;
+  padding: 0.5em 0;
+  font-size: 0.875em;
+  color: white;
+}

@@ -1,0 +1,220 @@
+{
+  "info": {
+    "name": "BigScreen API - Tests",
+    "_postman_id": "00000000-0000-0000-0000-000000000000",
+    "description": "Collection de tests pour les routes principales de l'API BigScreen.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "survey_id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "response_token",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"password\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', function () { pm.response.to.have.status(200); });",
+                  "var json = pm.response.json();",
+                  "if (json.access_token) {",
+                  "  pm.environment.set('token', json.access_token);",
+                  "}",
+                  "pm.test('Has access_token', function () { pm.expect(json).to.have.property('access_token'); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Refresh",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{base_url}}/api/auth/refresh" }
+          }
+        },
+        {
+          "name": "Me",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{base_url}}/api/auth/me" }
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": { "raw": "{{base_url}}/api/auth/logout" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Dashboard",
+          "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": { "raw": "{{base_url}}/api/admin/dashboard" } }
+        },
+        {
+          "name": "List Questions",
+          "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": { "raw": "{{base_url}}/api/admin/questions" } }
+        },
+        {
+          "name": "List Responses",
+          "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": { "raw": "{{base_url}}/api/admin/responses" } }
+        },
+        {
+          "name": "List Surveys",
+          "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": { "raw": "{{base_url}}/api/admin/surveys" } }
+        },
+        {
+          "name": "Create Survey",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Survey title example\",\n  \"description\": \"Description\"\n}"
+            },
+            "url": { "raw": "{{base_url}}/api/admin/surveys" }
+          }
+        },
+        {
+          "name": "Get Survey",
+          "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": { "raw": "{{base_url}}/api/admin/surveys/{{survey_id}}" } }
+        },
+        {
+          "name": "Update Survey",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": { "mode": "raw", "raw": "{\n  \"title\": \"Updated title\"\n}" },
+            "url": { "raw": "{{base_url}}/api/admin/surveys/{{survey_id}}" }
+          }
+        },
+        {
+          "name": "Delete Survey",
+          "request": { "method": "DELETE", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": { "raw": "{{base_url}}/api/admin/surveys/{{survey_id}}" } }
+        },
+        {
+          "name": "Survey Questions",
+          "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": { "raw": "{{base_url}}/api/admin/surveys/{{survey_id}}/questions" } }
+        },
+        {
+          "name": "Create Survey Question",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "body": { "mode": "raw", "raw": "{\n  \"text\": \"What is your age?\",\n  \"type\": \"text\"\n}" },
+            "url": { "raw": "{{base_url}}/api/admin/surveys/{{survey_id}}/questions" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Public Surveys",
+      "item": [
+        { "name": "List Surveys", "request": { "method": "GET", "url": { "raw": "{{base_url}}/api/surveys" } } },
+        { "name": "Survey Questions (public)", "request": { "method": "GET", "url": { "raw": "{{base_url}}/api/surveys/{{survey_id}}/questions" } } },
+        {
+          "name": "Submit Survey Response",
+          "request": {
+            "method": "POST",
+            "header": [ { "key": "Content-Type", "value": "application/json" } ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"personal_data\": {\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\"\n  },\n  \"answers\": [\n    { \"question_id\": 1, \"answer\": \"42\" }\n  ]\n}"
+            },
+            "url": { "raw": "{{base_url}}/api/surveys/{{survey_id}}/responses" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Responses / Answers",
+      "item": [
+        {
+          "name": "Get Answers by Response Token",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{base_url}}/api/answers/{{response_token}}" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Personal Data",
+      "item": [
+        { "name": "List Personal Data", "request": { "method": "GET", "url": { "raw": "{{base_url}}/personal-data" } } },
+        { "name": "Create Personal Data", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{ \"name\": \"John\", \"email\": \"john@example.com\" }" }, "url": { "raw": "{{base_url}}/personal-data" } } }
+      ]
+    }
+  ]
+}

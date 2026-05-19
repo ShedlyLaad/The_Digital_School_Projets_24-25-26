@@ -1,0 +1,6 @@
+.cards_only{
+    padding-bottom: 3mm;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+  }

@@ -1,0 +1,48 @@
+.footer {
+    background-color: rgba(141, 126, 126, 0.411);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+    position: relative;
+
+  }
+  .contact_us{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-start;
+width: 100%;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+padding-top: 3mm;
+  }
+  .footer__contact{
+    padding-bottom: 1.5mm;
+  }
+
+  .social-icons{
+    padding-bottom: 3mm;
+    display: flex;
+    gap: 5px;
+  }
+  .footer__icon {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer__copyright {
+    margin-top: 20px;
+    background-color: rgba(134, 134, 134, 0.276);
+    width: 100%;
+    text-align: center;
+  }
+  .footer__icon {
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer__icon:hover {
+    transform: scale(1.2);
+}

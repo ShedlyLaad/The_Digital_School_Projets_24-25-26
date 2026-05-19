@@ -1,0 +1,136 @@
+.dashboard-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 24px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-input {
+  width: 100%;
+}
+
+.search-input .ant-input {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  height: 42px;
+  border-radius: 8px 0 0 8px;
+  font-size: 16px;
+}
+
+.search-input .ant-input:hover,
+.search-input .ant-input:focus {
+  background: white;
+}
+
+.search-input .ant-input-search-button {
+  height: 42px;
+  border-radius: 0 8px 8px 0;
+  width: 120px;
+}
+
+.search-input .ant-input-clear-icon {
+  color: #1a365d;
+}
+
+.upload-section {
+  display: flex;
+  align-items: center;
+}
+
+.upload-button {
+  background: #1890ff;
+  border: none;
+  height: 42px;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.15);
+}
+
+.upload-button:hover {
+  background: #40a9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(24, 144, 255, 0.2);
+}
+
+.upload-button .anticon {
+  font-size: 20px;
+}
+
+/* Animation pour le chargement */
+.ant-upload-loading .anticon-upload {
+  animation: uploadSpin 1s linear infinite;
+}
+
+@keyframes uploadSpin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-actions {
+    flex-direction: column;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .search-section,
+  .upload-section {
+    width: 100%;
+  }
+
+  .upload-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-input .ant-input-search-button {
+    width: 42px;
+  }
+
+  .search-input .ant-input-search-button span:last-child {
+    display: none;
+  }
+}
+
+/* Style des notifications */
+.ant-message-notice-content {
+  border-radius: 8px;
+  padding: 12px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* États de focus */
+.search-input .ant-input:focus,
+.upload-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}

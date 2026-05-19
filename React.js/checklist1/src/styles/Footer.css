@@ -1,0 +1,30 @@
+/* Exemple de styles pour Footer1 */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .footer__contact h4 {
+    margin: 0.5rem 0;
+  }
+  
+  .footer__icon {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+  
+  .footer__icon svg {
+    fill: white;
+  }
+  
+  .footer__copyright {
+    margin-top: 1rem;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  

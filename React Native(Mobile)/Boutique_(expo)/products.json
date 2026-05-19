@@ -1,0 +1,17 @@
+[
+    {
+      "id": "1",
+      "name": "Nike Blazer Low '77 Jumbo",
+      "price": "$120.11",
+      "image": "https://example.com/nike-blazer-low.jpg",
+      "description": "Women's Shoes"
+    },
+    {
+      "id": "2",
+      "name": "Nike Air Force 1 '07 LV8 Next Nature",
+      "price": "$320.11",
+      "image": "https://example.com/nike-air-force-1.jpg",
+      "description": "Men's Shoes"
+    }
+  ]
+  

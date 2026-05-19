@@ -1,0 +1,99 @@
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    max-width: 460px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 50px;
+    overflow: hidden;
+  }
+  
+  .wrapper .title {
+    display: block;
+    color: #4d4d4d;
+    font-weight: 100;
+    font-size: 34px;
+    text-align: center;
+    height: 40px;
+    line-height: 34px;
+    margin-bottom: 10px;
+  }
+  
+  .wrapper .name-wrapper {
+    margin: 10px 0 0;
+    position: relative;
+    width: 100%;
+  }
+  
+  .wrapper form {
+    background: #f2f2f2;
+    width: 100%;
+    min-width: 330px;
+    padding: 20px 25px;
+    border-radius: 4px;
+  }
+  
+  .wrapper input,
+  .wrapper textarea {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 0 0 20px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    background: #fff;
+    font-size: 17px;
+    font-weight: lighter;
+    outline: 0;
+    transition: border-color 0.3s ease-in-out;
+    color: #333;
+  }
+  
+  .wrapper input:focus,
+  .wrapper textarea:focus {
+    transition: border-color 0.3s ease-in-out;
+    border-color: #4d4d4d;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .wrapper textarea {
+    resize: none;
+    height: 120px;
+  }
+  
+  .wrapper button {
+    display: block;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #4d4d4d;
+    border-radius: 40px;
+    cursor: pointer;
+    color: #4d4d4d;
+    padding: 10px 0;
+    outline: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 auto;
+    transition: all 0.25s;
+    width: calc(100% - 40px);
+  }
+  
+  .wrapper button:hover {
+    color: white;
+    background: #4d4d4d;
+    transition: all 0.25s;
+  }
+  
+  .wrapper button:active {
+    color: #1a1a1a;
+    transition: all 0.25s;
+  }
+  
+  .wrapper button:after {
+    content: "SUBMIT";
+    letter-spacing: 2px;
+  }
+  

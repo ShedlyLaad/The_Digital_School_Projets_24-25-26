@@ -1,0 +1,43 @@
+/* Exemple de styles pour NavbarHook */
+.header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: white;
+  }
+  
+  .nav__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav__toggle {
+    cursor: pointer;
+  }
+  
+  .nav__menu {
+    display: none;
+  }
+  
+  .nav__menu.show-menu {
+    display: block;
+  }
+  
+  .nav__list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav__list__web {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav__link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav__search-input {
+    padding: 0.5rem;
+  }
+  

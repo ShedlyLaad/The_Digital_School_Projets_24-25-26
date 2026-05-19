@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .dashboard, .checklist, .form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #26547c;
+  }
+  
+  .new-button, .save-button {
+    background-color: #ffd166;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .new-button:hover, .save-button:hover {
+    background-color: #e0b757;
+  }
+  
+  .checklist-item, .task-item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .checklist-item h2, .task-item h3 {
+    margin-top: 0;
+  }
+  
+  .edit-button, .delete-button, .task-item button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-button, .form-container button {
+    background-color: #26547c;
+    color: white;
+  }
+  
+  .edit-button:hover, .form-container button:hover {
+    background-color: #1f4b6c;
+  }
+  
+  .delete-button {
+    background-color: #ef476f;
+    color: white;
+  }
+  
+  .delete-button:hover {
+    background-color: #d83b5f;
+  }
+  
+  .task-item button {
+    background-color: #ef476f;
+    color: white;
+  }
+  
+  .task-item button:hover {
+    background-color: #d83b5f;
+  }
+  
+  .form-container form div {
+    margin-bottom: 15px;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-container input[type="text"], .form-container textarea, .form-container select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .form-container textarea {
+    resize: vertical;
+  }
+  

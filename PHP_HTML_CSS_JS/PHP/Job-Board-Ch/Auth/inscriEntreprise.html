@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Job-Board-CH</title>
+
+    <link rel="stylesheet" href="./css.css">
+    <title>Inscription Entreprise</title>
+
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="Logo-JobBoard.png" alt="Logo de Job-Board-CH" class="logo" />
+            <ul>
+                    <li><a href="../Home/index.html">Accueil</a></li>
+                    <li><a href="#">Offres d'emploi</a></li>
+                    <li><a href="../Home/contact.html">Contact</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+            
+            <!-- <div class="dropdown">
+    <button class="dropbtn">Register  
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="./InscriUtilisateur.html">Utilisateur</a>
+          <a href="./inscriEntreprise.html">Entreprise</a>
+    </div>
+  </div>  -->
+        <div class="container-register">
+    <h2>Inscription Entreprise</h2>
+
+       <form action="inscriEntreprise.php" method="post" autocomplete="on">
+            <!-- Nom -->
+            <div class="box">
+                <label for="nom_entreprise" class="fl fontLabel"> Nom : </label>
+                <div class="new iconBox">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="fr">
+                    <input type="text" name="nom_entreprise" placeholder="nom" class="textBox" autofocus="on" required>
+                </div>
+                <div class="clr"></div>
+            </div>
+            
+            <!-- Prenom -->
+            <div class="box">
+                <label for="adresse" class="fl fontLabel"> Adresse: </label>
+                <div class="fl iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="text" name="adresse" placeholder="adresse" class="textBox" autofocus="on" required>
+                </div>
+                <div class="clr"></div>
+            </div>
+
+            <!-- Email -->
+            <div class="box">
+                <label for="email" class="fl fontLabel"> Email : </label>
+                <div class="fl iconBox"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="email" required name="email" placeholder="Email" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+
+            <!-- Password -->
+            <div class="box">
+                <label for="localisation" class="fl fontLabel"> Localisation </label>
+                <div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="localisation" required name="localisation" placeholder="Localisation" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+<div class="box">
+                <label for="domaine" class="fl fontLabel"> Domaine </label>
+                <div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="domaine" required name="domaine" placeholder="Domaine" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+
+            <div class="box">
+                <label for="password" class="fl fontLabel"> Mot de passe </label>
+                <div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="Password" required name="password" placeholder="Mot de passe" class="textBox">
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div class="box" style="background: #2d3e3f">
+                <input type="Submit" name="Submit" class="submit-register" value="S'inscrire">
+            </div>
+        </form>
+</div>
+
+<div class="footer-social-links"3> 
+  
+</div>
+</div>
+<div class="footer-copyright">
+<div class="footer-copyright-wrapper">
+  <p class="footer-copyright-text">
+    <a class="footer-copyright-link" href="#" target="_self"> ©2024. | CH-JOB-BOARD. | All rights reserved. </a>
+  </p>
+</div>
+</div>
+</footer>
+    </body>
+</html>
+

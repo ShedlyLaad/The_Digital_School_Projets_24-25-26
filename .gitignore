@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+vendor/
+bower_components/
+
+# Build / cache
+target/
+build/
+dist/
+.cache/
+*.class
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# IDE & OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# PHP
+composer.phar
+
+# Large UX exports (use Figma links in UX_UI/Les_Liens_Figma_Utils.md)
+UX_UI/**/*.pdf
+
+# Media binaires lourds (optionnel — décommenter si besoin)
+# **/*.mp4

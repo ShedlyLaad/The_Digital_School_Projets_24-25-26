@@ -1,0 +1,72 @@
+body {
+    background-color: rgb(192, 178, 255);
+    color: rgb(12, 22, 8);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    text-emphasis-color: blue;
+}
+.board {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+}
+#gameContainer{
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    text-emphasis-color: blue;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cell:nth-child(3n) {
+    margin-right: 0;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.button
+    {
+        text-align: center;
+    }
+
+.button {
+    text-align: center;
+    display: grid;
+    width: 180px;
+    height: 40px;
+    background-image: linear-gradient(rgb(202, 251, 254), rgb(202, 251, 254));
+    border: none;
+    border-radius: 50px;
+    color: rgb(55, 9, 59);
+    font-weight: 600;
+    align-content: center;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 1px 3px 0px rgb(132, 121, 181);
+    transition-duration: .2s;
+  }
+  .button:active {
+    transform: translate(2px ,0px);
+    box-shadow: 0px 1px 0px rgb(139, 113, 255);
+    padding-bottom: 1px;
+  }
+  

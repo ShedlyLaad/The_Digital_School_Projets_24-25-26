@@ -1,0 +1,166 @@
+/* Styles globaux */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+}
+
+/* Mise en page du dashboard */
+.dashboard-entreprise {
+    height: 100vh; 
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+
+#app{
+width: 100%;
+    background: blue;
+    height: 88vh;
+    display: flex;
+}
+
+/* Styles de la sidebar */
+.main-sidebar {
+    position: fixed;
+    left: 0;
+    top: 12%;
+    height: 88%;
+    width: 15%;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+
+.sidebar {
+    padding: 20px;
+}
+
+.list-items {
+    list-style: none;
+    padding: 0;
+}
+
+.list-items .item a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block; /* Assure que le lien remplit tout l'espace horizontal de l'item */
+}
+
+.list-items .item a:hover {
+    background-color: transparent;
+}
+
+/* Styles de la zone de contenu */
+.content {
+flex-grow: 1;
+    background-color: #cac8c891;
+    padding: 20px;
+    width: 85% !important;
+    height: 80vh;
+    overflow: hidden;
+    position: absolute;
+    left: 15%;
+}
+
+/* Icônes Material */
+.material-icons-sharp {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Petit ajustement pour améliorer la lisibilité */
+.list-items .item {
+    margin-bottom: 5px;
+}
+
+
+
+
+nav {
+    display: flex !important;
+    justify-content: space-between!important;
+    align-items: center !important;
+    padding: 5px 0 !important;
+    flex-wrap: wrap !important;
+    border-block-end: 3px solid gray ;
+}
+
+nav .logo {
+	width: 120px;
+	cursor: pointer;
+}
+
+nav .cart {
+	width: 40px;
+	cursor: pointer;
+}
+
+nav ul {
+	display: flex !important;
+	justify-content: flex-end !important;
+	flex: 1 !important;
+	padding-right: 40px !important;
+	text-align: right !important;
+	list-style-type: none !important;
+}
+
+ul li {
+	margin-right: 10px;
+}
+
+ul li a {
+	position: relative;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #000000;
+	font-size: 16px;
+}
+
+ul li a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0;
+	transform: translateX(-50%) translateY(-5px);
+	height: 3px;
+	background: #ffa400;
+	transition: 0.3s;
+}
+
+ul li a:hover::after {
+	width: 38%;
+}
+
+
+.footer-copyright {
+	background-color: #282e35e8;
+    color: #fff;
+    padding: 15px 30px;
+    text-align: center;
+  }
+  
+  .footer-copyright-wrapper {
+	  margin-left: auto;
+	  margin-right: auto;
+	  max-width: 1200px;
+  }
+  
+  .footer-copyright-text {
+	color: #fff;
+	  font-size: 13px;
+	  font-weight: 400;
+	  line-height: 18px;
+	  margin-bottom: 0;
+	  margin-top: 0;
+  }
+  
+  .footer-copyright-link {
+	  color: #fff;
+	  text-decoration: none;
+  }
+  
