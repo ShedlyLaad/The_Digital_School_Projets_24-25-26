@@ -7,7 +7,7 @@ Formation **Digital School** (Tunis · Paris) · Années **2024–2026**
 
 Ce repository centralise mes projets académiques et pratiques : applications web et mobile, APIs, bases de données et conception UX/UI. L’organisation par stack facilite la navigation et l’évaluation pédagogique.
 
-> Portfolio professionnel : [github.com/ShedlyLaad](https://github.com/ShedlyLaad)
+> Portfolio professionnel : https://portfolio-shedly.vercel.app/
 
 ---
 
@@ -72,27 +72,10 @@ Ce repository centralise mes projets académiques et pratiques : applications we
 
 ---
 
-## Mise en route
-
-Chaque sous-projet possède ses propres dépendances :
-
-```bash
-# Exemple React
-cd React.js/movie && npm install && npm start
-
-# Exemple Laravel
-cd Laravel/todo-app && composer install && php artisan serve
-
-# Exemple Spring Boot
-cd "Spring Boot/Gestion_stock" && ./mvnw spring-boot:run
-```
-
-> `node_modules/`, `vendor/` et exports PDF UX sont exclus du dépôt (voir `.gitignore`). Exécuter `npm install` ou `composer install` après clonage.
-
----
-
 ## Contact
 
 **GitHub :** [ShedlyLaad](https://github.com/ShedlyLaad)
+**E-Mail :** [ChedlyLaadhiby](shedlylaaddhiby@gmail.com
+)
 
 © 2026 **Chedly Laadhiby** — Tous droits réservés
